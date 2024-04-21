@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+          "module": "CommonJS"
+        }
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+  
+// "esModuleInterop": true, - позволяет использовать обычные import export
+//   esModuleInterop позволяет работать с пакетами , которые используют
+// common js как с обычными пакетами с помощью import require() modul
+
+// "allowSyntheticDefaultImports": true - импорты без * 
+
+// "moduleResolution": "node", - определяет то , какие импорты будут
+
+// "allowJs": true, - позволяет компилятору обрабатывать не только js но и ts
+
+//       "jsx": "react", - позволяет писать конструкции , как в react
+
+// "target": "es5", - версия стандарта es5  - для того чтобы большинство браузеров могли поддерживать
+
+// "module": "es6", - модульная система , command js , es6
+
+// "noImplicitAny": true, - не позволяет использовать переменные без явного указания типов 
+
+// "outDir": "./dist/", - то куда производится сборка , не важна
