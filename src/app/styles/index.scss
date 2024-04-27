@@ -30,21 +30,21 @@ button {
   user-select: none;
   appearance: none;
   touch-action: manipulation;
-}
-button:focus-visible {
-  box-shadow: 0 0 0 2px #666;
-}
-button:hover {
-  background-color: #dbe7f2;
-}
-button:active {
-  transform: scale(0.96);
-}
-button:disabled {
-  pointer-events: none;
-  opacity: 0.65;
+  &:focus-visible {
+    box-shadow: 0 0 0 2px #666;
+  }
+  &:hover {
+    background-color: #dbe7f2;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }
 }
 
 a {
-    margin-right: 10px;
+  margin-right: 10px;
 }

@@ -7,17 +7,15 @@ import { useTheme } from "app/providers/ThemeProvider/lib/useTheme";
 import MainPage from "pages/MainPage/ui/MainPage";
 import AboutPage from "pages/AboutPage/ui/AboutPage";
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navbar";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div
-      className={classNames("app", { hovered: true, selected: true }, [theme])}
-    >
+    <div className={classNames("app", { hovered: true, selected: true }, [theme])}>
+      <Navbar/>
+      <AppRouter />
       <button onClick={toggleTheme}>Toggle</button>
-      <Link to={"/"}>Главная</Link>
-      <Link to={"/about"}>О нас</Link>
-      <AppRouter/>
     </div>
   );
 };
