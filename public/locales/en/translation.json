@@ -5,5 +5,8 @@
     "Главная": "Main",
     "О нас": "About as",
     "Тёмная": "Dark",
-    "Светлая": "Light"
+    "Светлая": "Light",
+    "Произошла непредвиденная ошибка": "An unexpected error occurred",
+    "Обновить страницу": "Refresh the page",
+    "Выбросить ошибку": "Throw error"
 }
