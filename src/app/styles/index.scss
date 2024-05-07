@@ -2,13 +2,15 @@
 @import "themes/dark.scss";
 @import "themes/normal.scss";
 @import "variables/global.scss";
-body {
+
+.app,
+.app_modal {
   font: var(--font-m);
+  color: var(--primary-color);
 }
 .app {
   min-height: 100vh;
   background: var(--bg-color);
-  color: var(--primary-color);
 }
 .content-page {
   display: flex;
