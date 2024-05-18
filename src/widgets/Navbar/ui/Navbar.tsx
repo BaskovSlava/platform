@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Modal } from "shared/ui/Modal/Modal";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { useCallback, useState } from "react";
+import { LoginModal } from "features/AuthByUsername";
 
 interface NavbarProps {
   className?: string;
@@ -16,9 +17,13 @@ export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false)
 
-  const onToggleModal = useCallback(() => {
-    setIsAuthModal(prev => !prev)
-  }, [])
+  const onCloseModal = useCallback(() => {
+    setIsAuthModal(false)
+  }, []);
+
+  const onShowModal = useCallback(() => {
+    setIsAuthModal(true)
+  }, []);
 
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
@@ -35,13 +40,11 @@ export const Navbar = ({ className }: NavbarProps) => {
           {t("Главная")}
         </AppLink>
         <AppLink to={"/about"}>{t("О нас")}</AppLink>
-        <Button onClick={onToggleModal} theme={ThemeButton.CLEAR_INVERNED}>{t("Войти")}</Button>
-        <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae
-          eius obcaecati voluptate. Quo, ullam autem laudantium rem impedit ad
-          consectetur cum sit nesciunt quam pariatur repellat sunt labore esse
-          aperiam.
-        </Modal>
+        <Button onClick={onShowModal} theme={ThemeButton.CLEAR_INVERNED}>{t("Войти")}</Button>
+        <LoginModal
+        isOpen={isAuthModal}
+        onClose={onCloseModal}
+        />
       </div>
     </div>
   );
